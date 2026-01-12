@@ -1,0 +1,13 @@
+.nav-btn {
+  color: #9AA3AB; /* inactivo */
+}
+
+.nav-btn.active {
+  color: #005AA7; /* activo */
+}
+
+.nav-btn svg,
+.nav-btn img {
+  width: 24px;
+  height: 24px;
+}
