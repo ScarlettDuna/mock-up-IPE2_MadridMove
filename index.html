@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +8,28 @@
 </head>
 <body>
     <div class="app">
+        <h1>¿A dónde quieres ir?</h1>
+        <form action="" method="post">
+            <input type="text" name="origen" id="origen" placeholder="Origen">
+            <button type="button">Usar mi ubicación actual</button>
+            <br>
+            <input type="text" name="destino" id="destino" placeholder="Destino">
+            <button type="button" class="btn" aria-label="Intercambiar">
+                <img src="assets/swap.svg" alt="intercambiar origen-destino">
+            </button>
+            <br>
+            <button type="submit">Buscar</button>
+        </form>
 
     </div>
     <nav>
-        <button class="nav-btn active" aria-label="Usuario">
+        <button class="nav-btn" aria-label="Usuario">
             <img src="assets/person_24dp.svg" alt="search button" aria-hidden="true">
         </button>
         <button class="nav-btn" aria-label="Tarjeta transporte">
             <img src="assets/payment_card.svg" alt="tarjeta transporte" aria-hidden="true">
         </button>
-        <button class="nav-btn" aria-label="Búsqueda">
+        <button class="nav-btn active" aria-label="Búsqueda">
             <img src="assets/search.svg" alt="búsqueda trayecto" aria-hidden="true">
         </button>
         <button class="nav-btn" aria-label="Favoritos">
