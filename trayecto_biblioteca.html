@@ -5,27 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trayecto IES Pío Baroja - Biblioteca</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
-<!-- Botón atrás-->
-    
+<div class="device">
+    <!-- Botón atrás-->
+    <header class="app-header">
+        <button class="back-btn" aria-label="Volver">
+            <img src="assets/arrow_back_ios_24dp.svg" alt="" aria-hidden="true">
+        </button>
+        <h1>Instituto → Biblioteca</h1>
+    </header>
+
+    <div class="app">
+        <!-- Imagen del trayecto -->
+        <div class="route-image">
+            <img src="assets/trayecto_biblioteca.jpg"
+                 alt="Trayecto del instituto a la biblioteca">
+        </div>
+
+        <!-- Info del trayecto -->
+        <div class="route-info">
+            <p><strong>Duración:</strong> 12 min</p>
+            <p><strong>Transporte:</strong> Bus + a pie</p>
+            <p><strong>Línea:</strong> EMT 60</p>
+        </div>
+    </div>
 
     <nav>
-        <button class="nav-btn" aria-label="Usuario">
-            <img src="assets/person_24dp.svg" alt="search button" aria-hidden="true">
+        <button class="nav-btn" data-page="profile.html" aria-label="Usuario">
+            <img src="assets/person_24dp.svg" alt="" aria-hidden="true">
         </button>
-        <button class="nav-btn" aria-label="Tarjeta transporte">
-            <img src="assets/payment_card.svg" alt="tarjeta transporte" aria-hidden="true">
+
+        <button class="nav-btn" data-page="card.html" aria-label="Tarjeta transporte">
+            <img src="assets/payment_card.svg" alt="" aria-hidden="true">
         </button>
-        <button class="nav-btn" aria-label="Búsqueda">
-            <img src="assets/search.svg" alt="búsqueda trayecto" aria-hidden="true">
+
+        <button class="nav-btn active" data-page="index.html" aria-label="Búsqueda">
+            <img src="assets/search.svg" alt="" aria-hidden="true">
         </button>
-        <button class="nav-btn" aria-label="Favoritos">
-            <img src="assets/star_24dp.svg" alt="trayectos favoritos" aria-hidden="true">
+
+        <button class="nav-btn" data-page="favorites.html" aria-label="Favoritos">
+            <img src="assets/star_24dp.svg" alt="" aria-hidden="true">
         </button>
-        <button class="nav-btn" aria-label="Reports">
-            <img src="assets/report_24dp.svg" alt="reports incidencias" aria-hidden="true">
+
+        <button class="nav-btn" data-page="report.html" aria-label="Reports">
+            <img src="assets/report_24dp.svg" alt="" aria-hidden="true">
         </button>
     </nav>
+
+</div>
 </body>
 </html>

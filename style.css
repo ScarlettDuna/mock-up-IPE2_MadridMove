@@ -1,13 +1,256 @@
+:root {
+    --device-height: 644px;
+    --header-height: 56px;
+    --nav-height: 64px;
+}
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fondo del navegador */
+body {
+    background: #e5e7eb; /* gris suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: system-ui, sans-serif;
+}
+
+/* Simulación de viewport móvil */
+.app {
+    width: 100%;
+    max-width: 390px;      /* iPhone 12/13 */
+    height: calc(
+            var(--device-height) -
+            var(--header-height) -
+            var(--nav-height)
+    );
+    background: #ffffff;
+    padding: 16px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.app::-webkit-scrollbar {
+    width: 0;
+}
+.device {
+    width: 390px;
+    height: var(--device-height);
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* flex-shrink: 0; */
+}
 .nav-btn {
-  color: #9AA3AB; /* inactivo */
+    background: none;
+    border: none;
+    padding: 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9AA3AB;
+    transition: all 0.15s ease;
 }
 
 .nav-btn.active {
   color: #005AA7; /* activo */
 }
 
-.nav-btn svg,
-.nav-btn img {
-  width: 24px;
-  height: 24px;
+.nav-btn img,
+.nav-btn svg {
+    width: 24px;
+    height: 24px;
+    filter: grayscale(100%);
+    opacity: 0.7;
 }
+.nav-btn.active {
+    color: #005AA7; /* azul EMT */
+}
+
+.nav-btn.active img,
+.nav-btn.active svg {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.1);
+}
+.nav-btn:active {
+    background: rgba(0, 90, 167, 0.1);
+}
+/* H1 home */
+.home h1 {
+    text-align: center;
+}
+
+/* Inputs */
+input[type="text"] {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    color: #2E3440;
+}
+
+input::placeholder {
+    color: #9AA3AB;
+}
+
+input:focus {
+    outline: none;
+    border-color: #005AA7; /* azul EMT */
+    background: #ffffff;
+}
+button[type="submit"] {
+    width: 100%;
+    margin-top: 16px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 14px;
+    background: #005AA7; /* azul EMT */
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+button[type="submit"]:active {
+    background: #004a8a;
+}
+/* Botón secundario */
+form button[type="button"]:not(.btn) {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    color: #005AA7;
+    text-align: left;
+    cursor: pointer;
+}
+/* Botón de intercambio */
+.btn {
+    background: #f1f5f9;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+}
+form {
+    margin-top: 16px;
+}
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0 16px;
+    background: linear-gradient(
+            to bottom,
+            #F8F9F4 0%,
+            #F8F9F4 60%,
+            #ffffff 100%
+    );
+}
+.logo-wrapper img {
+    width: 140px;       /* ajustable */
+    max-width: 70%;
+    height: auto;
+}
+.logo-wrapper {
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+/* Deja respirar al h1 después del logo */
+h1 {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+/* Header fijo superior */
+.app-header {
+    position: relative;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+/* Botón atrás */
+.back-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 2; /* importante */
+}
+
+.back-btn:active {
+    background: rgba(0, 90, 167, 0.1);
+}
+
+.back-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.route-image img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+.route-info {
+    background: #f9fafb;
+    border-radius: 16px;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.route-info p {
+    margin-bottom: 8px;
+}
+/* h1 centrado con el botón atrás */
+.app-header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
