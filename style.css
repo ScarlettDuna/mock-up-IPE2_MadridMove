@@ -2,6 +2,7 @@
     --device-height: 644px;
     --header-height: 56px;
     --nav-height: 64px;
+    --width: 350px;
 }
 
 /* Reset básico */
@@ -24,7 +25,7 @@ body {
 /* Simulación de viewport móvil */
 .app {
     width: 100%;
-    max-width: 390px;      /* iPhone 12/13 */
+    max-width: var(--width);      
     height: calc(
             var(--device-height) -
             var(--header-height) -
@@ -39,7 +40,7 @@ body {
     width: 0;
 }
 .device {
-    width: 390px;
+    width: var(--width);
     height: var(--device-height);
     background: #ffffff;
     border-radius: 24px;
@@ -102,10 +103,10 @@ nav {
 }
 
 /* Inputs */
-input[type="text"] {
+input[type="text"], input[type="email"], input[type="password"] {
     width: 100%;
     padding: 14px 16px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     font-size: 16px;
     border-radius: 12px;
     border: 1px solid #e5e7eb;
@@ -192,6 +193,48 @@ form {
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
 }
+
+.accessibility-option {
+  margin: 12px 0;
+}
+
+.accessibility-option label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #2E3440;
+  cursor: pointer;
+}
+
+/* Ocultamos el checkbox real */
+.accessibility-option input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid #cbd5e1;
+  background: #ffffff;
+  display: grid;
+  place-content: center;
+  transition: all 0.15s ease;
+}
+
+/* Estado marcado */
+.accessibility-option input[type="checkbox"]:checked {
+  background: #005AA7; /* azul EMT */
+  border-color: #005AA7;
+}
+
+/* Check visual */
+.accessibility-option input[type="checkbox"]:checked::before {
+  content: "✓";
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 /* Deja respirar al h1 después del logo */
 h1 {
     margin-top: 12px;
@@ -210,6 +253,23 @@ h1 {
     background: #ffffff;
     border-bottom: 1px solid #e5e7eb;
 }
+.compact-header {
+    height: 48px; /* más bajo */
+    padding: 0 12px;
+}
+.compact-header img {
+    width: 32px;
+    height: auto;
+    opacity: 0.9;
+}
+.compact-header h1 {
+    position: static;
+    transform: none;
+    margin-left: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 /* Botón atrás */
 .back-btn {
     background: none;
@@ -254,3 +314,70 @@ h1 {
     white-space: nowrap;
 }
 
+/* Favoritos */
+/* Lista de favoritos */
+.favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+/* Tarjeta */
+.favorite-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Feedback táctil */
+.favorite-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Imagen del trayecto */
+.favorite-image img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+/* Info */
+.favorite-info {
+    padding: 12px 16px;
+}
+
+.favorite-info h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.favorite-info p {
+    font-size: 14px;
+    color: #6b7280;
+}
+/* Login */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.login-hint {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #9AA3AB;
+    text-align: center;
+}
+.form-block {
+    margin-top: 24px;
+    padding: 16px;
+    background: #f9fafb;
+    border-radius: 16px;
+}

@@ -75,3 +75,13 @@ document.querySelectorAll(".nav-btn").forEach(btn => {
     }
 });
 
+// Log-in usuario - Fake
+const loginForm = document.querySelector(".login-form");
+
+if (loginForm) {
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    // Simulación de login correcto
+    window.location.href = "index.html";
+  });
+}

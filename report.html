@@ -4,26 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Incidencias</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
-    
-
+<div class="device home">
+    <div class="app">
+        <header class="app-header compact-header">
+            <img src="assets/logo_sinNombre.png" alt="logo madrid move" aria-hidden="true">
+            <h1>Incidencias</h1>
+        </header>
+        
+    </div>
     <nav>
-        <button class="nav-btn" aria-label="Usuario">
+        <button class="nav-btn" data-page="profile.html" aria-label="Usuario">
             <img src="assets/person_24dp.svg" alt="search button" aria-hidden="true">
         </button>
-        <button class="nav-btn" aria-label="Tarjeta transporte">
+        <button class="nav-btn" data-page="card.html" aria-label="Tarjeta transporte">
             <img src="assets/payment_card.svg" alt="tarjeta transporte" aria-hidden="true">
         </button>
-        <button class="nav-btn" aria-label="Búsqueda">
+        <button class="nav-btn" data-page="index.html" aria-label="Búsqueda">
             <img src="assets/search.svg" alt="búsqueda trayecto" aria-hidden="true">
         </button>
-        <button class="nav-btn" aria-label="Favoritos">
+        <button class="nav-btn" data-page="favorites.html" aria-label="Favoritos">
             <img src="assets/star_24dp.svg" alt="trayectos favoritos" aria-hidden="true">
         </button>
-        <button class="nav-btn active" aria-label="Reports">
+        <button class="nav-btn active" data-page="report.html" aria-label="Reports">
             <img src="assets/report_24dp.svg" alt="reports incidencias" aria-hidden="true">
         </button>
     </nav>
+</div>
 </body>
 </html>
