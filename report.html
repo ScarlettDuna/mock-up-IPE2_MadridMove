@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +8,57 @@
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
 </head>
+
 <body>
-<div class="device home">
-    <div class="app">
-        <header class="app-header compact-header">
-            <img src="assets/logo_sinNombre.png" alt="logo madrid move" aria-hidden="true">
-            <h1>Incidencias</h1>
-        </header>
-        
+    <div class="device home">
+        <div class="app">
+            <header class="app-header compact-header">
+                <img src="assets/logo_sinNombre.png" alt="" aria-hidden="true">
+                <h1>Incidencias</h1>
+            </header>
+
+            <section class="reports-section">
+                <h3>En tus trayectos</h3>
+
+                <div class="report-card alert">
+                    <p><strong>Trayecto Casa</strong></p>
+                    <p>Línea 5 de metro en mantenimiento. Servicio reducido.</p>
+                </div>
+            </section>
+
+            <section class="reports-section">
+                <h3>Incidencias relevantes</h3>
+
+                <div class="report-card">
+                    <p><strong>Gran Vía</strong></p>
+                    <p>Accidente con tráfico lento. Retrasos en líneas 1, 34 y 55.</p>
+                </div>
+            </section>
+
+            <div class="reports-actions">
+                <button type="button" class="btn-secondary">Consultar incidencias abiertas</button>
+                <button type="button" class="btn-primary">Abrir nueva incidencia</button>
+            </div>
+
+        </div>
+        <nav>
+            <button class="nav-btn" data-page="profile.html" aria-label="Usuario">
+                <img src="assets/person_24dp.svg" alt="search button" aria-hidden="true">
+            </button>
+            <button class="nav-btn" data-page="card.html" aria-label="Tarjeta transporte">
+                <img src="assets/payment_card.svg" alt="tarjeta transporte" aria-hidden="true">
+            </button>
+            <button class="nav-btn" data-page="index.html" aria-label="Búsqueda">
+                <img src="assets/search.svg" alt="búsqueda trayecto" aria-hidden="true">
+            </button>
+            <button class="nav-btn" data-page="favorites.html" aria-label="Favoritos">
+                <img src="assets/star_24dp.svg" alt="trayectos favoritos" aria-hidden="true">
+            </button>
+            <button class="nav-btn active" data-page="report.html" aria-label="Reports">
+                <img src="assets/report_24dp.svg" alt="reports incidencias" aria-hidden="true">
+            </button>
+        </nav>
     </div>
-    <nav>
-        <button class="nav-btn" data-page="profile.html" aria-label="Usuario">
-            <img src="assets/person_24dp.svg" alt="search button" aria-hidden="true">
-        </button>
-        <button class="nav-btn" data-page="card.html" aria-label="Tarjeta transporte">
-            <img src="assets/payment_card.svg" alt="tarjeta transporte" aria-hidden="true">
-        </button>
-        <button class="nav-btn" data-page="index.html" aria-label="Búsqueda">
-            <img src="assets/search.svg" alt="búsqueda trayecto" aria-hidden="true">
-        </button>
-        <button class="nav-btn" data-page="favorites.html" aria-label="Favoritos">
-            <img src="assets/star_24dp.svg" alt="trayectos favoritos" aria-hidden="true">
-        </button>
-        <button class="nav-btn active" data-page="report.html" aria-label="Reports">
-            <img src="assets/report_24dp.svg" alt="reports incidencias" aria-hidden="true">
-        </button>
-    </nav>
-</div>
 </body>
+
 </html>
