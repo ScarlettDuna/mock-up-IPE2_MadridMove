@@ -85,3 +85,8 @@ if (loginForm) {
     window.location.href = "index.html";
   });
 }
+
+const btnAbrirIncidencia = document.getElementById('abrir-indicencia');
+btnAbrirIncidencia.addEventListener('click', () => {
+    window.location.href = "abrir_incidencia.html";
+})

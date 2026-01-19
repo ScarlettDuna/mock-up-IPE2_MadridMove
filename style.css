@@ -480,3 +480,61 @@ h1 {
     background: #e5e7eb;
     transform: scale(0.98);
 }
+.form-incidencia {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+}
+.form-incidencia label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #2E3440;
+}
+.form-incidencia select {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 15px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    color: #2E3440;
+}
+.form-incidencia input[type="file"] {
+    font-size: 14px;
+    color: #6b7280;
+}
+.form-incidencia button.use-location {
+    background: transparent;
+    border: none;
+    color: #005AA7;
+    text-align: left;
+    padding: 8px 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-incidencia {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 14px;
+    border: none;
+    background: #005AA7;
+    color: #ffffff;
+    cursor: pointer;
+}
+.form-hint {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 8px;
+}
+.form-page .app {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-page .form-incidencia {
+    flex: 1;
+}
