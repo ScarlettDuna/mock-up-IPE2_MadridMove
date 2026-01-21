@@ -26,15 +26,13 @@ body {
 .app {
     width: 100%;
     max-width: var(--width);      
-    height: calc(
-            var(--device-height) -
-            var(--header-height) -
-            var(--nav-height)
-    );
+    flex: 1;
     background: #ffffff;
     padding: 16px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: column;
 }
 .app::-webkit-scrollbar {
     width: 0;
@@ -45,13 +43,12 @@ body {
     background: #ffffff;
     border-radius: 24px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    position: relative;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
 }
 
 nav {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     height: var(--nav-height);
     background: #ffffff;
@@ -59,7 +56,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* flex-shrink: 0; */
+    flex-shrink: 0; 
 }
 .nav-btn {
     background: none;
@@ -254,20 +251,25 @@ h1 {
     border-bottom: 1px solid #e5e7eb;
 }
 .compact-header {
+    position: relative;
     height: 48px;
     padding: 0 12px;
+    display: flex;
+    align-items: center;
 }
 .compact-header img {
     width: 32px;
     height: auto;
     opacity: 0.9;
+    z-index: 2;
 }
 .compact-header h1 {
-    position: static;
-    transform: none;
-    margin-left: 12px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 18px;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 /* Botón atrás */
@@ -321,6 +323,7 @@ h1 {
     flex-direction: column;
     gap: 16px;
     margin-top: 12px;
+    flex: 1;
 }
 
 /* Tarjeta */
