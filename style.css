@@ -551,6 +551,7 @@ h1 {
     overflow: hidden;
   }
 
+  /* Fallback base */
   .device {
     width: 100vw;
     height: 100vh;
@@ -567,4 +568,16 @@ h1 {
     width: 100vw;
     border-radius: 0;
   }
+
+  /* Override moderno */
+  @supports (height: 100dvh) {
+    .device {
+      height: 100dvh;
+    }
+
+    .app {
+      height: calc(100dvh - var(--header-height) - var(--nav-height));
+    }
+  }
 }
+
