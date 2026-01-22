@@ -59,41 +59,50 @@ nav {
     flex-shrink: 0; 
 }
 .nav-btn {
-    background: none;
-    border: none;
-    padding: 8px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #9AA3AB;
-    transition: all 0.15s ease;
-}
-
-.nav-btn.active {
-  color: #005AA7; /* activo */
+  background: none;
+  border: none;
+  padding: 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9AA3AB;
+  position: relative;
+  transition: 
+    background 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.1s ease;
 }
 
 .nav-btn img,
 .nav-btn svg {
-    width: 24px;
-    height: 24px;
-    filter: grayscale(100%);
-    opacity: 0.7;
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: transform 0.15s ease, opacity 0.15s ease;
 }
+
+/* ACTIVO */
 .nav-btn.active {
-    color: #005AA7; /* azul EMT */
+  background: rgba(0, 90, 167, 0.08);
+  box-shadow: 0 0 0 6px rgba(0, 90, 167, 0.12);
 }
 
 .nav-btn.active img,
 .nav-btn.active svg {
-    filter: none;
-    opacity: 1;
-    transform: scale(1.1);
+  filter: none;
+  opacity: 1;
+  transform: scale(1.15);
 }
+
+/* PULSADO */
 .nav-btn:active {
-    background: rgba(0, 90, 167, 0.1);
+  background: rgba(0, 90, 167, 0.12);
+  box-shadow: 0 0 0 10px rgba(0, 90, 167, 0.18);
+  transform: scale(0.96);
 }
+
 /* H1 home */
 .home h1 {
     text-align: center;
