@@ -87,6 +87,18 @@ if (loginForm) {
 }
 
 const btnAbrirIncidencia = document.getElementById('abrir-indicencia');
-btnAbrirIncidencia.addEventListener('click', () => {
-    window.location.href = "abrir_incidencia.html";
-})
+if (btnAbrirIncidencia) {
+    btnAbrirIncidencia.addEventListener('click', () => {
+        window.location.href = "abrir_incidencia.html";
+    })
+}
+
+
+const volverBtn = document.getElementById('volver');
+
+if (volverBtn) {
+  volverBtn.addEventListener('click', () => {
+    window.location.href = 'index.html';
+  });
+}
+
